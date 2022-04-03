@@ -366,6 +366,7 @@ img {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
+ 
 }
 
 .form-label-modal{
@@ -394,7 +395,7 @@ img {
   position: absolute;
   left: 0;
   top: 0;
-  padding-top: 11px;
+  padding-top: 15px;
   padding-bottom: 11px;
   padding-left: 12px;
 }
@@ -414,7 +415,13 @@ border: 1px solid rgba(33, 33, 33, 0.2);
 box-sizing: border-box;
 border-radius: 4px;
 margin-bottom: 10px;
+margin-top: 4px;
 
+
+}
+
+.form-field input{
+  padding-left: 30px;
 }
 
 .modal-text{
@@ -436,6 +443,7 @@ resize: none;
 border: 1px solid rgba(33, 33, 33, 0.2);
 box-sizing: border-box;
 border-radius: 4px;
+margin-top: 4px;
 
 }
 
@@ -449,6 +457,88 @@ textarea::placeholder{
   color: rgba(117, 117, 117, 0.5);
   padding-top: 12px;
   padding-left: 16px;
+}
+
+.policy-checkbox{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input-policy{
+  margin-right: 9px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
+.icon-policy::before {
+  display: inline-block;
+  content: '';
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+}
+
+.checkbox:checked + .icon-policy::before {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-position: center;
+  background-size: contain;
+  background-origin: border-box;
+  background-image: url('../images/icon-Vector-1.svg');
+}
+
+.input-policy.checkbox:focus+.icon-policy::before,
+.input-policy.checkbox:hover+.icon-policy::before {
+  border-color: var(--accent-color);}
+
+.icon-policy {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 15px;
+  
+}
+
+/* .icon-policy,
+.policy-part {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--main-text-color);
+} */
+
+
+.policy-part{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: #2196F3;
+}
+
+.label-policy{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: #757575;
+  white-space: nowrap;
+  
+  
 }
 
 /* description section */
@@ -504,18 +594,7 @@ textarea::placeholder{
   color: #212121;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+
 .description-text {
   font-size: 14px;
   line-height: 1.7;
