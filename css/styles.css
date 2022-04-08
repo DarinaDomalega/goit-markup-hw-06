@@ -499,10 +499,10 @@ overflow: hidden;
 .checkbox:checked + .icon-policy::before {
   border-color: transparent;
   background-color: var(--accent-color);
-  background-position: center;
   background-size: contain;
   background-origin: border-box;
   background-image: url(../images/Vector.png);
+  padding: 4px 2px 3px 3px;
 }
 
 .input-policy.checkbox:focus +.icon-policy::before,
@@ -515,18 +515,13 @@ overflow: hidden;
   align-items: center;
   width: 16px;
   height: 15px;
+  background-color: var(--accent-color);
     outline: 2px solid #212121;
     border-radius: 2px;
   
 }
 
-/* .icon-policy,
-.policy-part {
-  margin-bottom: 0;
-  font-size: 14px;
-  line-height: 1.71;
-  color: var(--main-text-color);
-} */
+
 
 
 .policy-part{
@@ -541,6 +536,7 @@ overflow: hidden;
 }
 
 .label-policy{
+  
   margin-top: 20px;
   font-family: 'Roboto';
   font-style: normal;
