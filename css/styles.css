@@ -460,9 +460,11 @@ textarea::placeholder{
 }
 
 .policy-checkbox{
-  width: 100%;
+  width: 425px;
+  height: 24px;
   display: flex;
   align-items: center;
+  
 }
 
 .input-policy{
@@ -470,21 +472,29 @@ textarea::placeholder{
   display: inline-block;
   width: 15px;
   height: 15px;
+  overflow: hidden;
+
+
+overflow: hidden;
 }
 
 .icon-policy::before {
+  /* position: relative; */
   display: inline-block;
   content: '';
   margin-right: 7px;
   width: 16px;
   height: 15px;
+
   
 }
 
-.visually-hidden {
+/* .visually-hidden-second {
   position: absolute;
+  top: 0%;
+  left: 50%;
   overflow: hidden;
-}
+} */
 
 .checkbox:checked + .icon-policy::before {
   border-color: transparent;
@@ -492,11 +502,11 @@ textarea::placeholder{
   background-position: center;
   background-size: contain;
   background-origin: border-box;
-  background-image: url('../images/icon-Vector-1.svg');
+  background-image: url(../images/Vector.png);
 }
 
-.input-policy.checkbox:focus+.icon-policy::before,
-.input-policy.checkbox:hover+.icon-policy::before {
+.input-policy.checkbox:focus +.icon-policy::before,
+.input-policy.checkbox:hover +.icon-policy::before {
   border-color: var(--accent-color);}
 
 .icon-policy {
@@ -505,6 +515,8 @@ textarea::placeholder{
   align-items: center;
   width: 16px;
   height: 15px;
+    outline: 2px solid #212121;
+    border-radius: 2px;
   
 }
 
@@ -529,6 +541,7 @@ textarea::placeholder{
 }
 
 .label-policy{
+  margin-top: 20px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -537,8 +550,10 @@ textarea::placeholder{
   letter-spacing: 0.03em;
   color: #757575;
   white-space: nowrap;
-  
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 /* description section */
