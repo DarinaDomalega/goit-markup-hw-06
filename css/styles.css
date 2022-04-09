@@ -422,6 +422,7 @@ margin-top: 4px;
 
 .form-input-modal:focus +.form-label-modal::before{
   outline: var(--accent-color);
+  
 }
 
 .form-field input{
