@@ -420,6 +420,10 @@ margin-top: 4px;
 
 }
 
+.form-input-modal:focus +.form-label-modal::before{
+  outline: var(--accent-color);
+}
+
 .form-field input{
   padding-left: 30px;
 }
@@ -445,6 +449,12 @@ box-sizing: border-box;
 border-radius: 4px;
 margin-top: 4px;
 
+
+}
+
+.form-field textarea {
+padding-top:12px;
+padding-left:16px;
 }
 
 textarea::placeholder{
@@ -455,33 +465,30 @@ textarea::placeholder{
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-  padding-top: 12px;
-  padding-left: 16px;
+ padding-top:2px ;
 }
 
-.policy-checkbox{
+/* .policy-checkbox{
   width: 425px;
   height: 24px;
   display: flex;
   align-items: center;
   
-}
+} */
 
 .input-policy{
   margin-right: 9px;
   display: inline-block;
-  width: 15px;
+  width: 16px;
   height: 15px;
   overflow: hidden;
 
-
-overflow: hidden;
 }
 
 .icon-policy::before {
   /* position: relative; */
   display: inline-block;
-  content: '';
+  content:'';
   margin-right: 7px;
   width: 16px;
   height: 15px;
@@ -489,12 +496,16 @@ overflow: hidden;
   
 }
 
-/* .visually-hidden-second {
+.visually-hidden {
   position: absolute;
-  top: 0%;
-  left: 50%;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
   overflow: hidden;
-} */
+  border: 0;
+  clip: rect(0 0 0 0);
+}
 
 .checkbox:checked + .icon-policy::before {
   border-color: transparent;
@@ -502,22 +513,29 @@ overflow: hidden;
   background-size: contain;
   background-origin: border-box;
   background-image: url(../images/Vector.png);
-  padding: 4px 2px 3px 3px;
+  padding: 3px 2px 3px 3px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: var(--accent-color);
 }
 
-.input-policy.checkbox:focus +.icon-policy::before,
-.input-policy.checkbox:hover +.icon-policy::before {
-  border-color: var(--accent-color);}
+.checkbox:focus +.icon-policy::before {
+
+}
+
+/* .input-policy.checkbox:focus + .icon-policy::before{
+  transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: var(--accent-color);
+} */
 
 .icon-policy {
   display: inline-block;
   justify-content: center;
   align-items: center;
-  width: 16px;
+  width: 15px;
   height: 15px;
-  background-color: var(--accent-color);
-    outline: 2px solid #212121;
-    border-radius: 2px;
+  outline: 2.5px solid #212121;
+  border-radius: 1px;
+
   
 }
 
@@ -536,7 +554,9 @@ overflow: hidden;
 }
 
 .label-policy{
-  
+  position: absolute;
+  top: 437px;
+  left: 54px;
   margin-top: 20px;
   font-family: 'Roboto';
   font-style: normal;
@@ -549,6 +569,8 @@ overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  
 
 }
 
