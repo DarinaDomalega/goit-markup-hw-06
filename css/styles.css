@@ -487,15 +487,19 @@ textarea::placeholder{
 }
 
 .icon-policy::before {
-  /* position: relative; */
+  position: relative;
   display: inline-block;
-  content:'';
+  content: '';
   margin-right: 7px;
   width: 16px;
   height: 15px;
+  vertical-align: middle;
+  border: 2px solid red;
+  border-radius: 4px;
+}
 
   
-}
+
 
 .visually-hidden {
   position: absolute;
@@ -520,7 +524,7 @@ textarea::placeholder{
 }
 
 .checkbox:focus +.icon-policy::before {
-
+  border-color: green;
 }
 
 /* .input-policy.checkbox:focus + .icon-policy::before{
@@ -529,12 +533,13 @@ textarea::placeholder{
 } */
 
 .icon-policy {
+
   display: inline-block;
   justify-content: center;
   align-items: center;
   width: 15px;
   height: 15px;
-  outline: 2.5px solid #212121;
+  outline: 2px solid #212121;
   border-radius: 1px;
 
   
