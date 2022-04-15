@@ -1303,15 +1303,12 @@ display: flex;
 }
 
 .button-submit {
- position: absolute;
  width: 200px;
  height: 50px;
  display: flex;
  align-items: center;
  text-align: center;
  letter-spacing: 0.06em;
- top: 42%;
- left: 100%;
  padding-top: 10px;
  padding-bottom: 10px;
  padding-left: 29px;
@@ -1330,7 +1327,7 @@ display: flex;
  border-color: #2196f3;
 }
 
-.form-label{
+.text-submit{
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
